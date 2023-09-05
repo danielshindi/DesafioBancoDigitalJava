@@ -55,6 +55,12 @@ public class Banco {
 		
 	}
 	
+	public Cliente encontrarCliente (String cpf) {
+		for (Cliente cliente : this.getClientes()) {
+			if (cliente.getCpf().equals(cpf)) return cliente;
+		}
+		return null;
+	}
 	
 	public Conta encontrarConta (int numeroConta) {
 		for (Conta conta : this.getContas()) {

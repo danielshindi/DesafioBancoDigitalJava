@@ -31,7 +31,7 @@ public class Main {
 			else if (opcao.equals("2")) {
 				System.out.println("Digite o CPF: ");
 				String cpf = sc.next();
-				banco.criarConta(encontrarCliente(banco, cpf));	
+				banco.criarConta(banco.encontrarCliente(cpf));	
 				
 			}
 			else if (opcao.equals("3")) {
@@ -77,12 +77,7 @@ public class Main {
 		
 	}
 
-	public static Cliente encontrarCliente (Banco banco, String cpf) {
-		for (Cliente cliente : banco.getClientes()) {
-			if (cliente.getCpf().equals(cpf)) return cliente;
-		}
-		return null;
-	}
+	
 
 }
 
